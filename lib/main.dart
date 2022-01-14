@@ -1,18 +1,23 @@
+import 'package:diet_app/bottomnav.dart';
 import 'package:flutter/material.dart';
+
 import 'homepage.dart';
+import 'bottomnav.dart';
+
 void main() {
   runApp(MyApp());
 }
+
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter First App',
+      title: 'Wellmore App',
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        primaryColor: Colors.white,
       ),
-      home: HomePage(),
+      home: BottomNav(),
 
     );
 
