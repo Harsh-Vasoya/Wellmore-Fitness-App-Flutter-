@@ -118,11 +118,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   children: <Widget>[
                     SizedBox(
                         height: 200,
-                        child: Image.asset(
-                          "assets/user1.jpg",
-                          fit: BoxFit.contain,
-                        )),
-                    SizedBox(height: 45),
+                        child: Text("Wellmore Login", style: TextStyle(
+                  fontSize: 60,
+                  fontWeight: FontWeight.w400,
+                ),),),
+                    SizedBox(height: 35),
                     emailField,
                     SizedBox(height: 25),
                     passwordField,

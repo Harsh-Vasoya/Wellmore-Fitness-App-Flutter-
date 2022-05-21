@@ -210,11 +210,11 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
                     SizedBox(
-                        height: 180,
-                        child: Image.asset(
-                          "assets/user1.jpg",
-                          fit: BoxFit.contain,
-                        )),
+                        height: 100,
+                        child: Text("Get Started", style: TextStyle(
+                          fontSize: 45,
+                          fontWeight: FontWeight.w400,
+                        ),),),
                     SizedBox(height: 45),
                     firstNameField,
                     SizedBox(height: 20),
