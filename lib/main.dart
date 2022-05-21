@@ -1,4 +1,5 @@
 import 'package:diet_app/bottomnav.dart';
+import 'package:diet_app/login_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'homepage.dart';
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.white,
       ),
-      home: BottomNav(),
+      home: LoginScreen(),
 
     );
 

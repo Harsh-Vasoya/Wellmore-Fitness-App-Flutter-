@@ -146,7 +146,7 @@ class _DropDownState extends State<DietAdd> {
 
 
                         ListTile( title:Text(
-                          ("Protein in grams :"),
+                          ("Protein(g):"),
                           style: const TextStyle(
                             color: Color(0xFF000000),
                             fontSize: 20,
@@ -177,7 +177,7 @@ class _DropDownState extends State<DietAdd> {
 
 
                         ListTile( title:Text(
-                          ("Carbs in grams :"),
+                          ("Carbs(g) :"),
                           style: const TextStyle(
                             color: Color(0xFF000000),
                             fontSize: 20,
@@ -207,7 +207,7 @@ class _DropDownState extends State<DietAdd> {
                         ),
 
                         ListTile( title:Text(
-                          ("Fats in grams :"),
+                          ("Fats(g) :"),
                           style: const TextStyle(
                             color: Color(0xFF000000),
                             fontSize: 20,
@@ -238,7 +238,7 @@ class _DropDownState extends State<DietAdd> {
                         ),
 
                         ListTile( title:Text(
-                          ("Calories (kcal) :"),
+                          ("Calories(kcal) :"),
                           style: const TextStyle(
                             color: Color(0xFF000000),
                             fontSize: 20,
