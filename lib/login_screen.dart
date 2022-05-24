@@ -1,5 +1,6 @@
 import 'package:diet_app/bottomnav.dart';
 import 'package:diet_app/registration_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
@@ -19,7 +20,7 @@ class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController passwordController = new TextEditingController();
 
   // firebase
-  //final _auth = FirebaseAuth.instance;
+  final _auth = FirebaseAuth.instance;
 
   // string for displaying the error Message
   String? errorMessage;
@@ -90,10 +91,7 @@ class _LoginScreenState extends State<LoginScreen> {
           padding: EdgeInsets.fromLTRB(20, 15, 20, 15),
           minWidth: MediaQuery.of(context).size.width,
           onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => BottomNav()),
-            );
+            signIn(emailController.text, passwordController.text);
           },
           child: Text(
             "Login",
@@ -161,7 +159,7 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   // login function
-  /*void signIn(String email, String password) async {
+  void signIn(String email, String password) async {
     if (_formKey.currentState!.validate()) {
       try {
         await _auth
@@ -169,7 +167,7 @@ class _LoginScreenState extends State<LoginScreen> {
             .then((uid) => {
           Fluttertoast.showToast(msg: "Login Successful"),
           Navigator.of(context).pushReplacement(
-              MaterialPageRoute(builder: (context) => HomeScreen())),
+              MaterialPageRoute(builder: (context) => BottomNav())),
         });
       } on FirebaseAuthException catch (error) {
         switch (error.code) {
@@ -199,5 +197,5 @@ class _LoginScreenState extends State<LoginScreen> {
         print(error.code);
       }
     }
-  }*/
+  }
 }

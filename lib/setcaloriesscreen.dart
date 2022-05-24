@@ -10,12 +10,10 @@ class _RangeWidget extends State<SetCaloriesScreen> {
   RangeValues _currentRangeValues1 = const RangeValues(30, 120);
   RangeValues _currentRangeValues2 = const RangeValues(100, 400);
   RangeValues _currentRangeValues3 = const RangeValues(30, 100);
-  late FlutterToast flutterToast;
 
   @override
   void initState() {
     super.initState();
-    flutterToast = FlutterToast(context);
   }
 
   @override
@@ -306,11 +304,5 @@ class _RangeWidget extends State<SetCaloriesScreen> {
     );
 
 
-    flutterToast.showToast(
-      child: toast,
-      toastDuration: Duration(seconds: 3),
-      gravity: ToastGravity.BOTTOM,
-
-    );
   }
 }

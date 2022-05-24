@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "340097177209",
+    "project_id": "wellmore-fitness-app",
+    "storage_bucket": "wellmore-fitness-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:340097177209:android:8714e73d113f65b9cfa6a8",
+        "android_client_info": {
+          "package_name": "com.example.diet_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "340097177209-el8fvp2aenamit3213ek4vm8hufqcai7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.diet_app",
+            "certificate_hash": "a6a1ad697d46a1a01367ccaedd96391e8bce6276"
+          }
+        },
+        {
+          "client_id": "340097177209-8boh38jkj8s6kdm981io2mt951hf0jcb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxavz60nYa8QHZqlqj_tmDmBnao2gPH6Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "340097177209-8boh38jkj8s6kdm981io2mt951hf0jcb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

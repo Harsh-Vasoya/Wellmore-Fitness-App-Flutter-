@@ -1,11 +1,15 @@
 import 'package:diet_app/bottomnav.dart';
 import 'package:diet_app/login_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 import 'homepage.dart';
 import 'bottomnav.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+
   runApp(MyApp());
 }
 

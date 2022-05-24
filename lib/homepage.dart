@@ -1,19 +1,45 @@
 import 'dart:ui';
 
 import 'package:animations/animations.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 import 'package:diet_app/mealdetailscreen.dart';
 import 'package:diet_app/model/meal.dart';
 
 import 'package:diet_app/setcaloriesscreen.dart';
 import 'package:diet_app/setmealsscreen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:vector_math/vector_math_64.dart' as math;
 import 'package:intl/intl.dart';
 
+import 'model/user_model.dart';
 
-class HomePage extends StatelessWidget {
+
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
+  @override
+  _HomeScreenState createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomePage> {
+  User? user = FirebaseAuth.instance.currentUser;
+  UserModel loggedInUser = UserModel();
+
+  @override
+  void initState() {
+    super.initState();
+    FirebaseFirestore.instance
+        .collection("users")
+        .doc(user!.uid)
+        .get()
+        .then((value) {
+      this.loggedInUser = UserModel.fromMap(value.data());
+      setState(() {});
+    });
+  }
 
   @override
     Widget build(BuildContext context) {
@@ -79,7 +105,7 @@ class HomePage extends StatelessWidget {
                     fontWeight: FontWeight.w400,
                   ),),
 
-                subtitle: Text("Hello, Harsh",
+                subtitle: Text("Hello, ${loggedInUser.firstName}",
                   style: TextStyle(
                     color: Colors.black87,
                     fontSize: 18,
